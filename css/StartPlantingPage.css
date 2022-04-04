@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 100px auto 0;
+    margin: auto;
 }
 .start-plant-image{
     padding: 5%;
@@ -19,7 +19,7 @@
 }
 .start-plant-image #time{
     margin: 7% auto 0;
-    width:160px;
+    width:8em;
     height: 60px;
     font-size: 32px;
     font-family: 'Poppins', sans-serif;

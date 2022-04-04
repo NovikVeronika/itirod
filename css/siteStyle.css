@@ -1,8 +1,11 @@
+html{
+    height: 100vh;
+}
 header{
     background: #ffa573;
     position: fixed;
     width: 100%;
-    height: 18%;
+    height: 18vh;
     background: url("../images/headerr.png") no-repeat;
     -webkit-background-size: 100%;
     left: 0;
@@ -12,12 +15,13 @@ header{
 body {
     display: flex;
     background: #ffa573;
+    padding-top: 18vh;
 }
 .text-header{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 2rem;
 }
 .for-label{
     text-align: center;
