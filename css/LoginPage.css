@@ -18,11 +18,11 @@
 .log-form input{
     width: 100%;
     height: 100%;
-    margin: auto;
+    /*margin: auto;*/
     outline: none;
     border: none;
     border-bottom: 1px solid #ffa573;
-    padding: 5px;
+    padding: 3px;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: #714444;
@@ -33,7 +33,6 @@ input::placeholder{
 
 .log-form p{
     font-weight: normal;
-    margin-bottom: 10px;
     font-family: 'Poppins', sans-serif;
     color: #714444;
     font-size: 19px;

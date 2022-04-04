@@ -82,7 +82,7 @@ body {
 }
 .start-planting-button{
     display: block;
-    margin: 0 auto;
+    margin: 2rem auto;
     width: 220px;
     height: 70px;
     background: #714444;
