@@ -1,0 +1,95 @@
+header{
+    background: #ffa573;
+    position: fixed;
+    width: 100%;
+    height: 18%;
+    background: url("/images/headerr.png") no-repeat;
+    -webkit-background-size: 100%;
+    left: 0;
+    right: 0;
+    top:0;
+}
+body {
+    /*display: flex;*/
+    background: #ffa573;
+    height: 100%;
+}
+.text-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+.for-label{
+    text-align: center;
+    width: 162px;
+    height: 90px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    /*text-decoration: underline #944C4C 5px;*/
+    border-bottom: 5px solid #944C4C;
+    padding-bottom: 0;
+    color: rgba(180, 93, 93, 0.64);
+}
+.rest-label{
+    width: 170px;
+    height: 90px;
+
+    text-align: left;
+    vertical-align: bottom;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 620;
+    font-size: 60px;
+    line-height: 200%;
+    text-decoration: overline #944C4C 2px;
+
+    color: #944C4C;
+}
+.start-article{
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    margin: 180px auto 0;
+    color: #714444;
+}
+.row-for-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+.col-for-image{
+    /*margin: auto;*/
+    /*float: left;*/
+    padding: 5%;
+    width: 80px;
+    height: 80px;
+    justify-items: center;
+    text-align: center;
+    /*flex:33.33%;*/
+}
+.col-for-image p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #F5E2E2;
+}
+.start-planting-button{
+    display: block;
+    margin: 0 auto;
+    width: 220px;
+    height: 70px;
+    background: #714444;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
