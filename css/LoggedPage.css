@@ -1,73 +1,26 @@
-header{
-    background: #ffa573;
-    position: fixed;
-    width: 100%;
-    height: 18vh;
-    background: url("../images/headerr.png") no-repeat;
-    -webkit-background-size: 100%;
-    left: 0;
-    right: 0;
-    top:0;
-}
-body {
-    /*display: flex;*/
-    background: #ffa573;
-    height: 100%;
-    padding-top: 18vh;
-}
-.text-header{
+
+.container{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-}
-.for-label{
-    text-align: center;
-    width: 162px;
-    height: 90px;
-
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 80px;
-    line-height: 110%;
-    letter-spacing: -0.05em;
-    /*text-decoration: underline #944C4C 5px;*/
-    border-bottom: 5px solid #944C4C;
-    padding-bottom: 0;
-    color: rgba(180, 93, 93, 0.64);
-}
-.rest-label{
-    width: 170px;
-    height: 90px;
-
-    text-align: left;
-    vertical-align: bottom;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 620;
-    font-size: 60px;
-    line-height: 200%;
-    text-decoration: overline #944C4C 2px;
-
-    color: #944C4C;
+    flex-direction: column;
+    margin-top: 40px;
 }
 .start-article{
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
     margin: auto;
     color: #714444;
+    padding-left: 10px;
 }
 .row-for-images{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: 40px auto;
 }
 .col-for-image{
     /*margin: auto;*/
     /*float: left;*/
-    padding: 5%;
+    padding: 0 20% 0 20%;
     width: 80px;
     height: 80px;
     justify-items: center;
@@ -82,7 +35,7 @@ body {
 }
 .start-planting-button{
     display: block;
-    margin: 2rem auto;
+    margin: 80px auto;
     width: 220px;
     height: 70px;
     background: #714444;
@@ -92,5 +45,11 @@ body {
     font-size: 20px;
     font-weight: lighter;
     letter-spacing: 1px;
+}
+.start-planting-button:hover {
+    background: rgba(0,0,0,0);
+    color: #714444;
+    box-shadow: inset 0 0 0 3px #714444;
+    font-weight: bold;
 }
 

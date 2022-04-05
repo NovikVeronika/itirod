@@ -10,23 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
+<header class="header-container">
     <div class="text-header">
-        <label class="for-label">FOR</label>
-        <label class="rest-label">rest</label>
+        <small class="for-label">FOR</small>
+        <small class="rest-label">rest</small>
     </div>
 </header>
-<form class="log-form" action="LoginPage.html">
-    <p>USER NAME</p>
-    <input class="login-field" type="text" placeholder="enter your login" required/>
-    <p>EMAIL</p>
-    <input class="email-field" type="email" placeholder="enter your e-mail"/>
-    <p>PASSWORD</p>
-    <input class="password-field" type="password" placeholder="enter your password" required/>
-    <button class="register-button" type="submit">
-        REGISTER NOW
-    </button>
+<div class="container-for-sign">
+    <form class="log-form" action="LoginPage.html">
+        <label>USER NAME</label>
+        <input class="login-field" type="text" placeholder="enter your login" required/>
+        <label>EMAIL</label>
+        <input class="email-field" type="email" placeholder="enter your e-mail"/>
+        <label>PASSWORD</label>
+        <input class="password-field" type="password" placeholder="enter your password" required/>
+        <button class="register-button" type="submit">
+            REGISTER NOW
+        </button>
+    </form>
+</div>
 
-</form>
 </body>
 </html>

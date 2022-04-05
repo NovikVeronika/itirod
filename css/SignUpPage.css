@@ -1,18 +1,19 @@
+.container-for-sign{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
 .log-form{
-    position: fixed;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     width: 25em;
     height: fit-content;
-    /*display: flex;*/
+
     flex-direction: column;
-    /*height: fit-content;*/
     justify-content: center;
-    /*align-items: center;*/
     border-radius: 6px;
     padding: 30px;
     background: #F5E2E2;
+    text-align: center;
+
 }
 .log-form input{
     width: 100%;
@@ -21,16 +22,17 @@
     outline: none;
     border: none;
     border-bottom: 1px solid #ffa573;
-    padding: 5px;
+    margin: 18px auto;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #714444;
 }
 input::placeholder{
     color: navajowhite;
 }
 
-.log-form p{
+.log-form label{
+
     font-weight: normal;
     /*padding-bottom: 0.4rem;*/
     font-family: 'Poppins', sans-serif;
@@ -53,5 +55,10 @@ input::placeholder{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: #fff;
+}
+.register-button:hover {
+    background: linear-gradient(120deg, #714444,#ffa573);
+    color: white;
+    box-shadow: inset 0 0 0 3px #714444;
 }
 

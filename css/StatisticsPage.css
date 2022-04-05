@@ -7,8 +7,9 @@
 .statistics-header{
     font-family: 'Poppins', sans-serif;
     color: #714444;
-    margin: auto;
+    margin-top: 20px;
     display: block;
+    padding-left: 20px;
 }
 
 .scrollmenu{
@@ -22,6 +23,9 @@
     font-size: 14px;
     margin: auto;
     display: block;
+}
+.buttons-for-stat{
+    padding-left: 30px;
 }
 .rbutton2{
     width: 150px;
