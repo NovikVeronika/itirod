@@ -27,6 +27,10 @@
 .buttons-for-stat{
     padding-left: 30px;
 }
+.buttons-for-stat:hover{
+    background: linear-gradient(90deg, #F5E2E2,#ffa573);
+    color: #714444;
+}
 .rbutton2{
     width: 150px;
     height: 50px;
