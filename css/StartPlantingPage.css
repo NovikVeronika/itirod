@@ -1,0 +1,57 @@
+.start-plant-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.start-plant-image{
+    padding: 5%;
+}
+.start-plant-image p{
+    text-align: center;
+    color: #714444;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 10px auto;
+}
+.start-plant-image #time{
+    margin: 7% auto 0;
+    width:8em;
+    height: 60px;
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #F5E2E2;
+    background: #714444;
+
+    text-align: center;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.jump-buttons{
+    width:160px;
+}
+.rbutton{
+    width: 150px;
+    height: 50px;
+    background: #F5E2E2;
+    color: #714444;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border-radius: 40px;
+    border:none;
+
+
+    margin: 2% auto;
+}
+.rbutton:hover {
+    background: linear-gradient(90deg, #F5E2E2,#ffa573);
+    color: #714444;
+    /*box-shadow: inset 0 0 0 3px #714444;*/
+
+}
+

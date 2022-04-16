@@ -1,0 +1,55 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.start-article{
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    margin: auto;
+    color: #714444;
+    padding-left: 10px;
+}
+.row-for-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+}
+.col-for-image{
+    /*margin: auto;*/
+    /*float: left;*/
+    padding: 0 20% 0 20%;
+    width: 80px;
+    height: 80px;
+    justify-items: center;
+    text-align: center;
+    /*flex:33.33%;*/
+}
+.col-for-image p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #F5E2E2;
+}
+.start-planting-button{
+    display: block;
+    margin: 80px auto;
+    width: 220px;
+    height: 70px;
+    background: #714444;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+.start-planting-button:hover {
+    background: rgba(0,0,0,0);
+    color: #714444;
+    box-shadow: inset 0 0 0 3px #714444;
+    font-weight: bold;
+}
+
