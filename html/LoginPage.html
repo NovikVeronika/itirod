@@ -17,12 +17,12 @@
     </div>
 </header>
 <div class="container-for-log">
-    <form class="log-form" action="LoggedPage.html">
-        <label>USER NAME</label>
-        <input class="login-field" type="text" placeholder="enter your login" required/>
+    <form class="log-form">
+        <label>E-MAIL</label>
+        <input class="login-field" id="loginInput" type="text" placeholder="enter your e-mail" required/>
         <label>PASSWORD</label>
-        <input class="password-field" type="password" placeholder="enter your password" required/>
-        <button class="login-button" type="submit">
+        <input class="password-field" id="passwordInput" type="password" placeholder="enter your password" required/>
+        <button class="login-button" type="button" id="loginButton">
             LOG IN
         </button>
         <div class="text-bottom-acc">
@@ -34,6 +34,7 @@
         </div>
     </form>
 </div>
-
+<script type="module" src="../js/general.js"></script>
+<script type="module" src="../js/login.js"></script>
 </body>
 </html>

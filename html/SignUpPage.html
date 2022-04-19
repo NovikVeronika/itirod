@@ -17,18 +17,20 @@
     </div>
 </header>
 <div class="container-for-sign">
-    <form class="log-form" action="LoginPage.html">
+    <form class="log-form">
         <label>USER NAME</label>
-        <input class="login-field" type="text" placeholder="enter your login" required/>
+        <input class="login-field" id="loginInput" type="text" placeholder="enter your login" required/>
         <label>EMAIL</label>
-        <input class="email-field" type="email" placeholder="enter your e-mail"/>
+        <input class="email-field" id="emailInput" type="email" placeholder="enter your e-mail"/>
         <label>PASSWORD</label>
-        <input class="password-field" type="password" placeholder="enter your password" required/>
-        <button class="register-button" type="submit">
+        <input class="password-field" id="passwordInput" type="password" placeholder="enter your password" required/>
+        <button class="register-button" id="signUpButton" type="button">
             REGISTER NOW
         </button>
     </form>
 </div>
 
+<script type="module" src="../js/general.js"></script>
+<script type="module" src="../js/signUp.js"></script>
 </body>
 </html>
