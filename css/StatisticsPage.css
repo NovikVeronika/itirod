@@ -25,9 +25,9 @@
     display: block;
 }
 .buttons-for-stat{
-    padding-left: 30px;
+    padding-left: 40px;
 }
-.buttons-for-stat:hover{
+.rbutton2:hover{
     background: linear-gradient(90deg, #F5E2E2,#ffa573);
     color: #714444;
 }

@@ -18,8 +18,8 @@
 </header>
 <div class="statistics-field">
     <div class="statistics-header">
-        <p>Login:</p>
-        <p>E-mail:</p>
+        <p >your E-mail:</p>
+        <p id="userEmail">E-mail:</p>
     </div>
     <div class="scrollmenu">
         <label class="st-item">Time</label><br><br>
@@ -35,7 +35,7 @@
         <button class="rbutton2" onclick="window.location.href='StartPlantingPage.html'">Go back</button>
     </aside>
 </div>
-
+<script>document.getElementById("userEmail").innerHTML = localStorage.getItem('name')</script>
 
 </body>
 </html>

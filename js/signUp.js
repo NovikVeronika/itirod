@@ -2,9 +2,19 @@ import {
     loginInput,
     emailInput,
     passwordInput,
-    signUpButton
-}from "./general.js";
+    signUpButton,
+    wrongEmail,
+    weakPassword,
+    wrongData, plantingTime
+} from "./general.js";
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+import {
+    getDatabase,
+    ref,
+    set,
+    get
+
+} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 
 import {
     getAuth,
@@ -24,6 +34,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
 const auth = getAuth(app);
 
@@ -31,11 +42,33 @@ const createAccount = async () => {
     const regLogin = loginInput.value;
     const regEmail = emailInput.value;
     const regPassword = passwordInput.value;
+    const userMail = regEmail.replace(".", "")
+    set(ref(db,'users/' + userMail), {
+        email: userMail,
+        login: regLogin
+    });
     try {
         const userCredential = await createUserWithEmailAndPassword(auth, regEmail, regPassword);
         console.log(userCredential.user);
         window.location.href = '../html/LoginPage.html';
     } catch (error) {
+        let errorType = error.code;
+        if (errorType === "auth/invalid-email"){
+            regPassword.removeAttribute("class");
+            regEmail.setAttribute("class","error");
+            wrongEmail.removeAttribute("hidden");
+            console.log(error);
+        }
+        else if (errorType === "auth/weak-password"){
+            regEmail.removeAttribute("class");
+            wrongEmail.setAttribute("hidden", true);
+            regPassword.setAttribute("class","error");
+            weakPassword.removeAttribute("hidden");
+            wrongData.setAttribute("hidden", true);
+            console.log(error);
+        }
+        else
+            wrongData.removeAttribute("hidden")
         console.log(error);
     }
 }

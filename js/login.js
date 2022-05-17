@@ -1,7 +1,10 @@
 import {
     loginInput,
     passwordInput,
-    loginButton
+    loginButton,
+    wrongEmail,
+    wrongPassword,
+    noUser
 }from "./general.js";
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 
@@ -35,7 +38,25 @@ const loginEmailPassword = async () => {
         console.log(userCredential.user);
         window.location.href = '../html/LoggedPage.html';
     } catch (error) {
-        console.log(error);
+        let errorType = error.code;
+        if (errorType === 'auth/invalid-email') {
+            loginEmail.setAttribute('class', 'error');
+            wrongEmail.removeAttribute('hidden');
+            noUser.setAttribute('hidden',true);
+            console.log(error);
+        } else if (errorType === 'auth/wrong-password') {
+            loginPassword.setAttribute('class', 'error');
+            wrongPassword.removeAttribute('hidden');
+            noUser.setAttribute('hidden',true);
+            console.log(error);
+        } else {
+            loginPassword.removeAttribute('class');
+            loginEmail.removeAttribute('class');
+            wrongEmail.setAttribute('hidden', true);
+            wrongPassword.setAttribute('hidden', true);
+            noUser.removeAttribute('hidden');
+            console.log(error);
+        }
     }
 }
 loginButton.addEventListener("click", loginEmailPassword);

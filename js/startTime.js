@@ -4,6 +4,7 @@ var secondsRemaining;
 var intervalHandle;
 var timeDisplay = document.getElementById("time-screen")
 var minutes = document.getElementById("time").value;
+let result = "";
 
 function invertTime() {
 
@@ -13,7 +14,7 @@ function invertTime() {
     const count1 = 0.8 * counter
     const count2 = 0.6 * counter
     const count3 = 0.4 * counter
-    const count4 = 0.2 * counter
+    const count4 = 0.1 * counter
 
     if (sec < 10) {
         sec = "0" + sec;
@@ -45,8 +46,13 @@ function invertTime() {
         image.src = images[4]
         alert("DONE! YOU ARE AMAZING!!! YOU MADE IT!!!!")
         clearInterval(intervalHandle)
+        result = "success"
         document.getElementById("time").style.display = "none"
         document.getElementById("motivation-label").style.display = "none"
+        document.getElementById("saveRecordButton").style.display="block"
+    }
+    else{
+        result = "failure"
     }
     secondsRemaining--;
 }
@@ -70,9 +76,11 @@ window.onload= function () {
     let inputTime = document.getElementById("time")
     let startButton = document.getElementById("startTimeButton")
     let giveUpButton = document.getElementById("giveUpButton")
-    let labels = document.getElementById("label-for-time");
+    let labels = document.getElementById("label-for-time")
+    let saveButton = document.getElementById("saveRecordButton")
     timeDisplay.style.display="none"
     giveUpButton.style.display="none"
+    saveButton.style.display="none"
 
     startButton.onclick = function () {
         startButton.style.display="none";
@@ -80,6 +88,7 @@ window.onload= function () {
         labels.style.display="none";
         startCountdown();
     }
+
 
     // inputTime.appendChild(inputTime);
     // startButton.appendChild(startButton);
