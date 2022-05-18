@@ -1,5 +1,4 @@
 export const loginInput = document.querySelector("#loginInput")
-console.log(loginInput.value);
 export const passwordInput = document.querySelector("#passwordInput")
 export const loginButton = document.querySelector("#loginButton")
 export const signUpButton = document.querySelector("#signUpButton")
