@@ -22,8 +22,11 @@
         <input class="login-field" id="loginInput" type="text" placeholder="enter your login" required/>
         <label>EMAIL</label>
         <input class="email-field" id="emailInput" type="email" placeholder="enter your e-mail"/>
+        <p class="error-login" id="wrongEmail" hidden="true">Invalid email</p>
         <label>PASSWORD</label>
         <input class="password-field" id="passwordInput" type="password" placeholder="enter your password" required/>
+        <p class="error-login" id="weakPasswords" hidden="true">Passwords do not match</p>
+        <p class="error-login" id="wrongData" hidden="true">Invalid data</p>
         <button class="register-button" id="signUpButton" type="button">
             REGISTER NOW
         </button>

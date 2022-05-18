@@ -62,3 +62,12 @@ body {
 
     color: #944C4C;
 }
+.error-login{
+    text-align: center;
+    color: #714444;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 10px auto;
+}

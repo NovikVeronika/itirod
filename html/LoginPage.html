@@ -20,8 +20,11 @@
     <form class="log-form">
         <label>E-MAIL</label>
         <input class="login-field" id="loginInput" type="text" placeholder="enter your e-mail" required/>
+        <p class="error-login" id="errorEmail" hidden="true">wrong email</p>
         <label>PASSWORD</label>
         <input class="password-field" id="passwordInput" type="password" placeholder="enter your password" required/>
+        <p class="error-login" id="errorPassword" hidden="true">Wrong password</p>
+        <p class="error-login" id="noUser" hidden="true">No such user</p>
         <button class="login-button" type="button" id="loginButton">
             LOG IN
         </button>
