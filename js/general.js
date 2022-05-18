@@ -1,4 +1,5 @@
 export const loginInput = document.querySelector("#loginInput")
+console.log(loginInput.value);
 export const passwordInput = document.querySelector("#passwordInput")
 export const loginButton = document.querySelector("#loginButton")
 export const signUpButton = document.querySelector("#signUpButton")
@@ -12,3 +13,4 @@ export const weakPassword = document.querySelector('#weakPassword')
 
 export const saveRecord = document.querySelector('#saveRecordButton')
 export const plantingTime = document.querySelector('#time')
+export const statisticsButton = document.querySelector('#statisticsButton')

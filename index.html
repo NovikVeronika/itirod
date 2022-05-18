@@ -17,15 +17,15 @@
     </div>
 </header>
 <div class="container-for-log">
-    <form class="log-form" action="html/LoggedPage.html">
+    <form class="log-form">
         <label>USER NAME</label>
-        <input class="login-field" type="text" placeholder="enter your login" required/>
+        <input id="loginInput" class="login-field" type="text" placeholder="enter your login" required/>
         <p class="error-login" id="wrongEmail" hidden="true">wrong email</p>
         <label>PASSWORD</label>
-        <input class="password-field" type="password" placeholder="enter your password" required/>
+        <input id="passwordInput" class="password-field" type="password" placeholder="enter your password" required/>
         <p class="error-login" id="wrongPassword" hidden="true">Wrong password</p>
         <p class="error-login" id="noUser" hidden="true">No such user</p>
-        <button class="login-button" type="submit">
+        <button class="login-button" type="button" id="loginButton">
             LOG IN
         </button>
         <div class="text-bottom-acc">
@@ -37,6 +37,7 @@
         </div>
     </form>
 </div>
-
+<script type="module" src="js/general.js"></script>
+<script type="module" src="js/login.js"></script>
 </body>
 </html>

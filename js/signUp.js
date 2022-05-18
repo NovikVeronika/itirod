@@ -54,15 +54,15 @@ const createAccount = async () => {
     } catch (error) {
         let errorType = error.code;
         if (errorType === "auth/invalid-email"){
-            regPassword.removeAttribute("class");
-            regEmail.setAttribute("class","error");
+            passwordInput.removeAttribute("class");
+            loginInput.setAttribute("class","error");
             wrongEmail.removeAttribute("hidden");
             console.log(error);
         }
         else if (errorType === "auth/weak-password"){
-            regEmail.removeAttribute("class");
+            loginInput.removeAttribute("class");
             wrongEmail.setAttribute("hidden", true);
-            regPassword.setAttribute("class","error");
+            passwordInput.setAttribute("class","error");
             weakPassword.removeAttribute("hidden");
             wrongData.setAttribute("hidden", true);
             console.log(error);

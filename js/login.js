@@ -30,28 +30,29 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 // connectAuthEmulator(auth, "http://localhost:9099/%22);
 const loginEmailPassword = async () => {
+    console.log(loginInput.value)
     const loginEmail = loginInput.value;
     localStorage.setItem('name',loginEmail);
     const loginPassword = passwordInput.value;
     try {
         const userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
         console.log(userCredential.user);
-        window.location.href = '../html/LoggedPage.html';
+        window.location.href = 'html/LoggedPage.html';
     } catch (error) {
         let errorType = error.code;
         if (errorType === 'auth/invalid-email') {
-            loginEmail.setAttribute('class', 'error');
+            loginInput.setAttribute('class', 'error');
             wrongEmail.removeAttribute('hidden');
             noUser.setAttribute('hidden',true);
             console.log(error);
         } else if (errorType === 'auth/wrong-password') {
-            loginPassword.setAttribute('class', 'error');
+            passwordInput.setAttribute('class', 'error');
             wrongPassword.removeAttribute('hidden');
             noUser.setAttribute('hidden',true);
             console.log(error);
         } else {
-            loginPassword.removeAttribute('class');
-            loginEmail.removeAttribute('class');
+            passwordInput.removeAttribute('class');
+            loginInput.removeAttribute('class');
             wrongEmail.setAttribute('hidden', true);
             wrongPassword.setAttribute('hidden', true);
             noUser.removeAttribute('hidden');
