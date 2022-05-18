@@ -4,13 +4,13 @@ import {
     ref,
     set,
     get,
-    update
+    update,
+    child,
+    onValue
 
 } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 
 import {
-    emailInput,
-    loginInput,
     saveRecord,
     plantingTime
 }from "../general.js";
@@ -26,8 +26,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-
+export const db = getDatabase(app);
 
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
@@ -37,14 +36,19 @@ let hh = String(today.getHours()).padStart(2, '0');;
 let min = String(today.getMinutes()).padStart(2, '0');;
 today = mm + '/' + dd + '/' + yyyy + " " + hh + ":" + min;
 
+export const userMail = localStorage.getItem("name").replace(".", "");
+const result1 = today.toString().replaceAll("/", "-")
 
-const updateUserData = async() =>{
-    const userMail = localStorage.getItem("name").replace(".", "");
-    const updateRef = ref(db, "users/" + userMail)
-    update(updateRef,{
+
+const updateUserData = async()=>{
+    const updateRef = ref(db, "users/" + userMail + "/results/" + result1)
+    update(updateRef, {
         minutes: plantingTime.value.toString(),
         date: today.toString()
     });
+    //window.location.href='temp.html';
+    saveRecord.removeEventListener("click", updateUserData);
 }
 
-saveRecord.addEventListener("click",updateUserData);
+saveRecord.addEventListener("click", updateUserData);
+
