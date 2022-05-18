@@ -39,8 +39,8 @@ const db = getDatabase(app);
 const auth = getAuth(app);
 
 const createAccount = async () => {
-    const regLogin = loginInput.value;
-    const regEmail = emailInput.value;
+    const regLogin = emailInput.value;
+    const regEmail = loginInput.value;
     const regPassword = passwordInput.value;
     const userMail = regEmail.replace(".", "")
     set(ref(db,'users/' + userMail), {
@@ -50,7 +50,7 @@ const createAccount = async () => {
     try {
         const userCredential = await createUserWithEmailAndPassword(auth, regEmail, regPassword);
         console.log(userCredential.user);
-        window.location.href = '../html/LoginPage.html';
+        window.location.href = '../index.html';
     } catch (error) {
         let errorType = error.code;
         if (errorType === "auth/invalid-email"){
