@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 90px auto 0;
 }
 .start-plant-image{
     padding: 7%;
@@ -33,5 +32,10 @@ aside{
 
 
     margin: 2% auto;
+}
+.rbutton:hover {
+    background: linear-gradient(90deg, #F5E2E2,#ffa573);
+    color: #714444;
+
 }
 

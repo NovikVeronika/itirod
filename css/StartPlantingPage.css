@@ -18,22 +18,33 @@
     margin: 10px auto;
 }
 .start-plant-image #time{
-    margin: 7% auto 0;
-    width:8em;
+    margin: 5% auto 0;
+    width:7em;
     height: 60px;
     font-size: 32px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    color: #F5E2E2;
-    background: #714444;
+    background: rgba(0,0,0,0);
+    color: #714444;
+    box-shadow: inset 0 0 0 3px #714444;
 
     text-align: center;
     border: none;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+
+}
+.start-plant-image .change-time{
+    display: block;
+}
+.start-plant-image .time-screen{
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #714444;
 }
 .jump-buttons{
     width:160px;
+    display: flex;
+    flex-direction: column;
 }
 .rbutton{
     width: 150px;

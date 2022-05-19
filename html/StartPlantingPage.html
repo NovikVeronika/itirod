@@ -19,19 +19,36 @@
 
 <div class="start-plant-box">
     <div class="start-plant-image" width="100%">
-        <img src="../images/example-image.png" alt="" width="350px"; height="350px";>
-        <p class="start-label">Don't waste your time! Do it now!</p>
+        <img id="image" src="../images/1.png" alt="" width="300px"; height="300px";>
+        <p class="start-label" id = "motivation-label">Don't waste your time! Do it now!</p>
         <p class="change-time">
-            <label for="time">Change time: </label><br>
-            <input type="time" id="time" name="time"/>
+            <label for="time" id="label-for-time">Change time: </label><br>
+            <select name="time" id="time">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="60">60</option>
+            </select>
+            <br><br>
+<!--            <input type="time" id="time" name="time"/>-->
+            <label class="time-screen" id="time-screen">0:00</label>
         </p>
     </div>
     <aside class="jump-buttons">
-        <button class="rbutton">Start</button>
-        <button class="rbutton" onclick="window.location.href='StatisticsPage.html'">Go to statistics</button>
+        <button class="rbutton" id="startTimeButton" type="button">Start</button>
+        <button class="rbutton" id="statistics" type="button"
+                onclick="window.location.href = 'StatisticsPage.html'">Go to statistics
+        </button>
         <button class="rbutton" onclick="window.location.href='LoggedPage.html'">Go back</button>
+        <button class="rbutton" id="giveUpButton" onclick="window.location.href='GiveUpPage.html'">Give up</button>
+        <button class="rbutton" id="saveRecordButton" type = "button">Save this Record</button>
     </aside>
 </div>
-
+<script type="module" src="../js/db/db.js"></script>
+<script src="../js/startTime.js"></script>
 </body>
 </html>
